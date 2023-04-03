@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="BookStyles.css">
+    <script defer src="BookScript.js"></script>
+</head>
+<body style="margin: 0; background-color: rgb(70, 70, 70);">
+    <div class="flex-row-container">
+        <div class="flex-container">
+            <label for="fname" class="labels">First name</label>
+            <input type="text" name="fname" id="fname" class="inputs">
+            <label for="sname" class="labels">Second name</label>
+            <input type="text" name="sname" id="sname" class="inputs">
+            <label for="lname" class="labels">Last name</label>
+            <input type="text" name="lname" id="lname" class="inputs">
+            <label for="pid" class="labels">Personal ID</label>
+            <input type="text" name="pid" id="pid" class="inputs">
+            <label for="number" class="labels">Telephone number</label>
+            <input type="text" name="number" id="number" class="inputs">
+            <label for="nationality" class="labels">Nationality</label>
+            <input type="text" name="nationality" id="nationality" class="inputs">
+            <label for="fid" class="labels">Flight ID</label>
+            <input type="text" name="fid" id="fid" class="inputs">
+            <label for="" class="labels">Choose ticket class</label>
+            <div id="ticket-class">
+                <div id="remaining-ticket-classes">
+                </div>
+                <div class="ticket-options" id="normal" style="transform: translateY(-10px);">Normal class</div>
+                <div class="ticket-options" id="business" style="transform: translateY(13px);">Business class</div>
+            </div>
+            <label for="price" class="labels">Price</label>
+            <div id="price"></div>
+            <button id="submit-btn">Submit</button>
+        </div>
+
+    </div>
+
+    <a href="EditFlightsView.html">Edit Flights</a>
+    <a href="BookView.html">Book Flights</a>
+    <a href="FlightsView.html">View All Flights</a>
+</body>
+</html>

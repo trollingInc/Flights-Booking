@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="EditFlightsStyles.css">
+    <script defer src="EditFlightsScript.js"></script>
+</head>
+<body style="margin: 0; background-color: rgb(70, 70, 70);">
+    
+    <div id="modal-background"></div>
+
+    <div class="user-info" id="form" style="display: none;">
+        <label for="iid" class="text-styling">Username:</label>
+        <input type="text" name="iid" id="iid" class="text-form text-styling">
+        <label for="iuname" class="text-styling">Username:</label>
+        <input type="text" name="iuname" id="iuname" class="text-form text-styling">
+        <label for="ipass" class="text-styling">Password:</label>
+        <input type="password" name="ipass" id="ipass" class="text-form text-styling">
+        <button class="submit-btn" id="login-btn">Submit</button>
+    </div>
+
+
+    <a href="EditFlightsView.html">Edit Flights</a>
+    <a href="BookView.html">Book Flights</a>
+    <a href="FlightsView.html">View All Flights</a>
+
+    <div class="flex-row-container">
+        <div class="flex-container">
+            <div class="choose-method-container">
+                <p class="choose-method-btn">Add Flight</p>
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">From</p>
+                <input type="text" id="a-from" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">To</p>
+                <input type="text" id="a-to" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Take off time</p>
+                <input type="text" id="a-take-off-time" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Time of arrival</p>
+                <input type="text" id="a-arrive-time" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Plane type</p>
+                <input type="text" id="a-plane-type" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Normal class tickets</p>
+                <input type="text" id="a-normal-tickets" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Business class tickets</p>
+                <input type="text" id="a-business-tickets" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Normal class price</p>
+                <input type="text" id="a-normal-price" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Business class price</p>
+                <input type="text" id="a-business-price" class="inputs">
+            </div>
+            <button class="submit-btn" id="a-submit-btn">Submit</button>
+        </div>
+        
+
+        <div class="flex-container">
+            <div class="choose-method-container">
+                <p class="choose-method-btn">Edit Flight</p>
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">ID of flight to change</p>
+                <input type="text" id="e-ID" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">From</p>
+                <input type="text" id="e-from" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">To</p>
+                <input type="text" id="e-to" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Take off time</p>
+                <input type="text" id="e-take-off-time" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Time of arrival</p>
+                <input type="text" id="e-arrive-time" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Plane type</p>
+                <input type="text" id="e-plane-type" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Normal class tickets</p>
+                <input type="text" id="e-normal-tickets" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Business class tickets</p>
+                <input type="text" id="e-business-tickets" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Normal class price</p>
+                <input type="text" id="e-normal-price" class="inputs">
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">Business class price</p>
+                <input type="text" id="e-business-price" class="inputs">
+            </div>
+            <button class="submit-btn" id="e-submit-btn">Submit</button>
+        </div>
+    </div>
+    
+    <div class="flex-row-container">
+        <div class="flex-container">
+            <div class="choose-method-container">
+                <p class="choose-method-btn">Delete</p>
+            </div>
+            <div class="flex-row-container" style="margin-right: 10px;">
+                <p class="required-info">ID of flight to delete</p>
+                <input type="text" id="d-ID" class="inputs">
+            </div>
+            <button class="submit-btn" id="d-submit-btn">Submit</button>
+        </div>
+    </div>
+
+
+</body>
+</html>

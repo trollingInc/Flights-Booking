@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="HomeStyles.css">
+    <script defer src="HomeScript.js"></script>
+</head>
+<body style="margin: 0;">
+    <div class="background"> <div class="background-dot"></div></div>
+    <div class="inner-content-container">
+        <div class="logins-container">
+            <p class="logins" id="signin" style="background-color: rgb(255, 193, 203);">Sign in</p>
+            <p class="logins" id="signup">Sign up</p>
+        </div>
+ 
+        <div id="input-borders">
+            <div class="input-container">
+                <form action="" class="user-info" id="form">
+                    <label for="iuname" class="text-styling">Username:</label>
+                    <input type="text" name="iuname" id="iuname" class="text-form text-styling">
+                    <label for="ipass" class="text-styling">Password:</label>
+                    <input type="password" name="ipass" id="ipass" class="text-form text-styling">
+                    <button class="submit-btn" id="login-btn">Submit</button>
+                </form>
+
+                <form action="" class="user-info" id="sign-up-form">
+                    <label for="uuname" class="text-styling">Username:</label>
+                    <input type="text" name="uuname" id="uuname" class="text-form text-styling">
+                    <label for="upass" class="text-styling">Password:</label>
+                    <input type="password" name="upass" id="upass" class="text-form text-styling">
+                    <label for="uemail" class="text-styling">Email:</label>
+                    <input type="text" name="uemail" id="uemail" class="text-form text-styling">
+                    <label for="ufname" class="text-styling">First name:</label>
+                    <input type="text" name="ufname" id="ufname" class="text-form text-styling">
+                    <label for="ulname" class="text-styling">Last name:</label>
+                    <input type="text" name="ulname" id="ulname" class="text-form text-styling">
+                    <label for="uPIN" class="text-styling">PIN:</label>
+                    <input type="text" name="uPIN" id="uPIN" class="text-form text-styling">
+                    <label for="uphone" class="text-styling">Phone number:</label>
+                    <input type="text" name="uphone" id="uphone" class="text-form text-styling">
+                    <label for="uadress" class="text-styling">Adress:</label>
+                    <input type="text" name="uadress" id="uadress" class="text-form text-styling">
+                    <button class="submit-btn" id="register-btn">Submit</button>
+                </form>
+            </div>
+            <p id="reset-pass" class="text-styling">Forgor password? :skull:</p>
+        </div>
+    </div>
+</body>
+</html>

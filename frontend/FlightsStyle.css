@@ -1,0 +1,189 @@
+#flights{
+    border: 2px;
+    border-radius: 5px;
+    border-color: rgb(255, 112, 136);
+    border-style: solid;
+    margin-top: 5px;
+}
+
+div.flex-row-container{
+    display: flex;
+    flex-direction: row;
+}
+
+details-id-string{
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-align: center;
+    font-family: 'Gill Sans', monospace;
+    font-size: 1rem;
+    min-width: 20%;
+    width: 20%;
+    color: white;
+}
+
+.no-details-info{
+    font-family: 'Gill Sans', monospace;
+    font-size: 1rem;
+    color: white;
+}
+
+@media only screen and (max-width: 700px){
+    .no-details-info{
+        font-size: 0.80rem;
+    }
+    details-id-string{
+        font-size: 0.80rem;
+    }
+}
+
+p.flight-name{
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 2px;
+}
+
+.add-border-between-sections{
+    border: 2px;
+    border-right-style: solid;
+    border-color: rgb(255, 112, 136);
+}
+
+div.flights-separation{
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 112, 136);
+}
+
+div.info-separation{
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+ 
+button.details-button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0.5rem;
+}
+
+button.details-button:focus{
+    outline: none;
+}
+
+.more-details{
+    display: none;
+    /*background-color: rgb(243, 243, 233);*/
+    position: absolute;
+    padding: 5px;
+    top: 25%;
+    right: 25%;
+    left: 25%;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 4px rgb(255, 112, 136) solid;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 700px){
+    .more-details{
+        right: 10%;
+        left: 10%;
+    }
+}
+
+.flights :not(:first-child) .details-button:hover{
+    text-shadow: 2px 2px 2px rgba(100, 149, 237, 0.6)
+    /*background-color: rgb(0, 170, 255);
+    outline: 5px solid white;
+    outline-offset: -5px;*/
+}
+
+.details-container{
+    margin-bottom: 10px;
+    /* transition: all 0.5s linear; */
+}
+
+/* .more-details{
+    position: absolute;
+    backdrop-filter: blur(10px);
+} */
+
+#modal-background{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(36, 36, 36);
+    /* display: none; */
+    position: absolute;
+    transition: 0.3s;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.more-details-text{
+    color: white;
+    /*text-shadow: 0px 0px 4px black;*/
+    text-shadow: 1px 1px 1.5px black, 1px 0px 1.5px black, -1px 0px 1.5px black, -1px -1px 1.5px black;
+}
+
+.active-details-button:hover{
+    text-shadow: 2px 2px 2px rgba(100, 149, 237, 0.6)
+}
+
+.book-ticket-btn{
+    height: 29px;
+    width: 130px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Gill Sans', monospace;
+    font-size: 1rem;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: rgb(255, 112, 136);
+    color: white;
+    background-color: rgb(255, 140, 159);
+    letter-spacing: 0.7px;
+    line-height: 1.8;
+    user-select: none;
+    cursor: pointer;
+}
+
+.book-ticket-btn:hover{
+    background-color: rgb(255, 193, 203);
+    color: black;
+}
+
+.book-ticket-btn:focus{
+    outline: none;
+}
+
+.employees-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-background{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(36, 36, 36);
+    /* display: none; */
+    position: absolute;
+    transition: 0.3s;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+}
