@@ -36,15 +36,29 @@ namespace FlightsBackend.Controllers
         public async Task<ActionResult<List<Flight>>> AddFlight(Flight flight)
         {
             if (flight == null) { return BadRequest(); }
-            var dbflight = await _context.Flights.FindAsync(flight.Id);
+            /*var dbflight = await _context.Flights.FindAsync(flight.Id);
             if(dbflight== null) { return NotFound("it just wasnt found man"); }
             if (flight.businessClassPrice == 0 && flight.normalClassPrice == 0)
             {
                 return Ok(await _context.Flights.FindAsync(flight.Id));
-            }
+            }*/
             _context.Flights.Add(flight);
             await _context.SaveChangesAsync();
             return Ok(await _context.Flights.ToListAsync());
+        }
+
+        [HttpPost]
+        [Route("GetFlight")]
+        public async Task<ActionResult<Flight>> GetFlight(Flight flight)
+        {
+            var dbflight = await _context.Flights.FindAsync(flight.Id);
+            if (dbflight == null) { return NotFound("id of flight not find"); }
+            if (flight.businessClassPrice == 0 && flight.normalClassPrice == 0)
+            {
+                return Ok(dbflight);
+            }
+            return BadRequest("something is wrong");
+            //return Ok("good");
         }
 
         /*[HttpGet]

@@ -144,7 +144,7 @@ deleteButton.addEventListener("click", ()=>{
 
 
 loginBtn.addEventListener("click", () =>{
-    let id = document.getElementById("iid");
+    //let id = document.getElementById("iid");
     let username = document.getElementById("iuname");
     let password = document.getElementById("ipass");
     console.log("it has been clicked");
@@ -154,7 +154,7 @@ loginBtn.addEventListener("click", () =>{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                id: id.value,
+                //id: id.value,
                 username: username.value,
                 password: password.value
             })
@@ -308,10 +308,9 @@ function EditFlight(){
 function DeleteFlight(){
     let id = document.getElementById("d-ID");
     if(id.value != ""){
-        fetch("https://localhost:7155/api/Flight", {
+        fetch("https://localhost:7155/api/Flight?id=" + id.value, {
             method: "DELETE",
             //headers: {"Content-Type": "application/json"},
-            body: id.value
             })
         .then(respone=>{
         if(respone["status"] == 200){

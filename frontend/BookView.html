@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
+    <link rel="stylesheet" href="NavStyles.css">
     <link rel="stylesheet" href="BookStyles.css">
     <script defer src="BookScript.js"></script>
 </head>
 <body style="margin: 0; background-color: rgb(70, 70, 70);">
+    <div class="nav-container">
+        <a href="EditFlightsView.html" class="nav">Edit Flights</a>
+        <a href="BookView.html" class="nav" style="background-color: rgb(255, 193, 203); color: black;">Book Flights</a>
+        <a href="FlightsView.html" class="nav">View All Flights</a>
+    </div>
+
     <div class="flex-row-container">
         <div class="flex-container">
             <label for="fname" class="labels">First name</label>
@@ -39,8 +46,7 @@
 
     </div>
 
-    <a href="EditFlightsView.html">Edit Flights</a>
-    <a href="BookView.html">Book Flights</a>
-    <a href="FlightsView.html">View All Flights</a>
+    <p style="color: white; margin-left: auto; margin-right: auto; margin-top: 50px; width: fit-content;">*Check all available flights <a href="FlightsView.html" style="color: white;">here!*</a></p>
+
 </body>
 </html>

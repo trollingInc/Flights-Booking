@@ -1,0 +1,24 @@
+.nav-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+.nav{
+    width: 20%;
+    height: 30px;
+    border: 3px solid rgb(255, 112, 136);
+    border-radius: 5px;
+    background-color: rgb(255, 140, 159);
+    color: white;
+    text-decoration: none;
+    font-family: 'Gill Sans', monospace;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.nav:hover{
+    color: black;
+    background-color: rgb(255, 193, 203);
+}

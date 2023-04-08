@@ -12,6 +12,12 @@ const normalClassTicket = document.getElementById("normal");
 const businessClassTicket = document.getElementById("business");
 const flightId = document.getElementById("fid");
 var flightWithThisId;
+const submit = document.getElementById("submit-btn");
+
+flightId.addEventListener("input", () =>{
+    chosenTicketClass.innerText = "";
+    document.getElementById("price").innerText = "";
+})
 
 availableTicketOptions.addEventListener("click", () =>{
     if(normalClassTicket.style.display == "block" || businessClassTicket.style.display == "block")
@@ -25,7 +31,7 @@ availableTicketOptions.addEventListener("click", () =>{
         alert("Flight ID has to be filled in.");
         return;
     }
-    fetch("https://localhost:7155/api/Flight", {
+    fetch("https://localhost:7155/api/Flight/GetFlight", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -45,6 +51,7 @@ availableTicketOptions.addEventListener("click", () =>{
             return response.json();
             else
             {
+                console.log("in first then / if")
                 alert("Something went wrong. Perhaps you got the wrong ID?")
             }
         }).then(response=>{
@@ -74,4 +81,43 @@ businessClassTicket.addEventListener("click", ()=>{
     businessClassTicket.style.display = "none";
     chosenTicketClass.innerText = "Business class";
     document.getElementById("price").innerText = flightWithThisId["businessClassPrice"] + "$";
+})
+
+submit.addEventListener("click", () =>{
+    let fname = document.getElementById("fname");
+    let sname = document.getElementById("sname");
+    let lname = document.getElementById("lname");
+    let personalID = document.getElementById("pid");
+    let telephoneNumber = document.getElementById("number");
+    let nationality = document.getElementById("nationality");
+    let price = document.getElementById("price");
+    if(chosenTicketClass.value != "" && flightId.value != "" && fname.value != "" && sname.value != "" && lname.value != "" && personalID.value != "" && telephoneNumber.value != "" && nationality.value != "" && price.value != "")
+    {
+        fetch("https://localhost:7155/api/Reservation", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                firstName: fname.value,
+                secondName: sname.value,
+                lastName: lname.value,
+                personalID: personalID.value,
+                telephoneNumber: telephoneNumber.value,
+                nationality: nationality.value,
+                ticketType: chosenTicketClass.innerText,
+                flightId: parseInt(flightId.value)
+            })
+        }).then(response =>{
+            if(response["status"] == 200)
+            {
+                alert("Successfully booked the flight. Safe travel.");
+            }
+            else{
+                alert("Something went wrong");
+            }
+        })
+    }
+    else
+    {
+        alert("All fields must be filled out!");
+    }
 })

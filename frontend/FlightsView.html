@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flights</title>
+    <link rel="stylesheet" href="NavStyles.css">
     <link rel="stylesheet" href="FlightsStyle.css">
     <script defer src="FlightsScript.js"></script>
 </head>
@@ -12,18 +13,17 @@
    
     <div id="modal-background"></div>
 
-    <a href="EditFlightsView.html">Edit Flights</a>
-    <a href="BookView.html">Book Flights</a>
-    <a href="FlightsView.html">View All Flights</a>
-
-    <div class="employees-div">
-        <a href="" class="no-details-info">Add/Edit flights</a>
+    <div class="nav-container">
+        <a href="EditFlightsView.html" class="nav">Edit Flights</a>
+        <a href="BookView.html" class="nav">Book Flights</a>
+        <a href="FlightsView.html" class="nav" style="background-color: rgb(255, 193, 203); color: black;">View All Flights</a>
     </div>
+
     <div id="flights">
         <div class="flex-row-container flights-separation" style="border-width: 2px;">
             <details-id-string class="add-border-between-sections">ID</details-id-string>
             <p class="no-details-info flight-name add-border-between-sections">Normal class ticket price</p>
-            <details-id-string class="add-border-between-sections" style="width: 20%;">Business class price</details-id-string>
+            <details-id-string class="add-border-between-sections" style="width: 20%;">Business class ticket price</details-id-string>
             <button class="details-button no-details-info" style="cursor: default;">Details</button>
         </div>
     </div>

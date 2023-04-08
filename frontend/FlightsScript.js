@@ -6,8 +6,8 @@ const createFlights = (data) =>{
         flight.style.borderWidth = "2px";
         flight.innerHTML = `<div class="flex-row-container flights-separation">
         <details-id-string class="add-border-between-sections">${data[i]["id"]}</details-id-string>
-        <p class="no-details-info flight-name add-border-between-sections">${data[i]["normalClassPrice"]}</p>
-        <details-id-string class="add-border-between-sections" style="width: 20%;">${data[i]["businessClassPrice"]}</details-id-string>
+        <p class="no-details-info flight-name add-border-between-sections">${data[i]["normalClassPrice"] + "$"}</p>
+        <details-id-string class="add-border-between-sections" style="width: 20%;">${data[i]["businessClassPrice"] + "$"}</details-id-string>
         <button id="${"show-details" + i.toString()}" class="details-button no-details-info active-details-button">Details</button>
     </div>
     <div id="${"details" + i.toString()}" class="more-details" style="display: none;">

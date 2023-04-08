@@ -2,6 +2,7 @@
 using FlightsBackend.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FlightsBackend.Controllers
 {
@@ -24,7 +25,7 @@ namespace FlightsBackend.Controllers
         [HttpPost]
         public async Task<ActionResult<User>> CheckCredentials(User user)
         {
-            var usname = await _context.Users.FindAsync(user.Id);
+            var usname = await _context.Users.FirstOrDefaultAsync(check => check.username == user.username);
             if (usname == null)
             {
                 return BadRequest("wrong id");
@@ -36,12 +37,20 @@ namespace FlightsBackend.Controllers
             return BadRequest("wrong credentials");
         }
 
-        /*[HttpPost]
+        [HttpPost]
+        [Route("AddUser")]
         public async Task<ActionResult<List<User>>> AddUser(User user)
         {
+            var dbuser = from users in _context.Users
+                         where users.username == user.username
+                         select users;
+            if (dbuser == null)
+            {
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
             return Ok(await _context.Users.ToListAsync());
-        }*/
+            }
+            return BadRequest("Username is taken");
+        }
     }
 }
