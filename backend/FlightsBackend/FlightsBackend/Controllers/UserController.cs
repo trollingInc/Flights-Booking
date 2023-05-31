@@ -41,9 +41,7 @@ namespace FlightsBackend.Controllers
         [Route("AddUser")]
         public async Task<ActionResult<List<User>>> AddUser(User user)
         {
-            var dbuser = from users in _context.Users
-                         where users.username == user.username
-                         select users;
+            var dbuser = await _context.Users.FirstOrDefaultAsync(check => check.username == user.username);
             if (dbuser == null)
             {
             _context.Users.Add(user);
